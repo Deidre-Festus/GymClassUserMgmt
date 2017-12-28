@@ -169,7 +169,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GymClassesController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -177,6 +176,10 @@
     <Compile Include="Migrations\201712280939227_UpdateGymClass.cs" />
     <Compile Include="Migrations\201712280939227_UpdateGymClass.Designer.cs">
       <DependentUpon>201712280939227_UpdateGymClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281353284_UpdateGymClass2.cs" />
+    <Compile Include="Migrations\201712281353284_UpdateGymClass2.Designer.cs">
+      <DependentUpon>201712281353284_UpdateGymClass2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -218,9 +221,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -261,6 +261,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712280939227_UpdateGymClass.resx">
       <DependentUpon>201712280939227_UpdateGymClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281353284_UpdateGymClass2.resx">
+      <DependentUpon>201712281353284_UpdateGymClass2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

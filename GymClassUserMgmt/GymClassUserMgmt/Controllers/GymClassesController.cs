@@ -20,6 +20,7 @@ namespace GymClassUserMgmt.Controllers
             return View(db.GymClasses.ToList());
         }
 
+        [Authorize]
         public ActionResult BookingToggle(int id)
         {
             GymClass CurrentClass = db.GymClasses.Where(g => g.Id == id).FirstOrDefault();
@@ -54,7 +55,9 @@ namespace GymClassUserMgmt.Controllers
             return View(gymClass);
         }
 
+
         // GET: GymClasses/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -63,6 +66,7 @@ namespace GymClassUserMgmt.Controllers
         // POST: GymClasses/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,StartTime,Duration,EndTime,Description")] GymClass gymClass)
@@ -78,6 +82,7 @@ namespace GymClassUserMgmt.Controllers
         }
 
         // GET: GymClasses/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -95,6 +100,7 @@ namespace GymClassUserMgmt.Controllers
         // POST: GymClasses/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Name,StartTime,Duration,EndTime,Description")] GymClass gymClass)
@@ -109,6 +115,7 @@ namespace GymClassUserMgmt.Controllers
         }
 
         // GET: GymClasses/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -124,6 +131,7 @@ namespace GymClassUserMgmt.Controllers
         }
 
         // POST: GymClasses/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
