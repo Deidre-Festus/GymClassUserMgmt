@@ -7,13 +7,13 @@ namespace GymClassUserMgmt.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class init : IMigrationMetadata
+    public sealed partial class UpdateGymClass : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateGymClass));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712271451347_init"; }
+            get { return "201712280939227_UpdateGymClass"; }
         }
         
         string IMigrationMetadata.Source
