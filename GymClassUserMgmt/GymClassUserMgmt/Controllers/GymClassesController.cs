@@ -57,7 +57,7 @@ namespace GymClassUserMgmt.Controllers
 
 
         // GET: GymClasses/Create
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             return View();
@@ -66,7 +66,7 @@ namespace GymClassUserMgmt.Controllers
         // POST: GymClasses/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
+        [Authorize(Roles = "admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,StartTime,Duration,EndTime,Description")] GymClass gymClass)
@@ -82,7 +82,7 @@ namespace GymClassUserMgmt.Controllers
         }
 
         // GET: GymClasses/Edit/5
-        [Authorize]
+        [Authorize(Roles ="admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -100,7 +100,7 @@ namespace GymClassUserMgmt.Controllers
         // POST: GymClasses/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
+        [Authorize(Roles = "admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Name,StartTime,Duration,EndTime,Description")] GymClass gymClass)
@@ -115,7 +115,7 @@ namespace GymClassUserMgmt.Controllers
         }
 
         // GET: GymClasses/Delete/5
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -131,7 +131,7 @@ namespace GymClassUserMgmt.Controllers
         }
 
         // POST: GymClasses/Delete/5
-        [Authorize]
+        [Authorize(Roles = "admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

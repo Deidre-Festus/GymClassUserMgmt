@@ -181,6 +181,10 @@
     <Compile Include="Migrations\201712281353284_UpdateGymClass2.Designer.cs">
       <DependentUpon>201712281353284_UpdateGymClass2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712281518285_AdminRoleCreated.cs" />
+    <Compile Include="Migrations\201712281518285_AdminRoleCreated.Designer.cs">
+      <DependentUpon>201712281518285_AdminRoleCreated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GymClass.cs" />
@@ -264,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712281353284_UpdateGymClass2.resx">
       <DependentUpon>201712281353284_UpdateGymClass2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281518285_AdminRoleCreated.resx">
+      <DependentUpon>201712281518285_AdminRoleCreated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,5 +1,7 @@
 namespace GymClassUserMgmt.Migrations
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using Models;
     using System;
     using System.Data.Entity;
@@ -28,8 +30,22 @@ namespace GymClassUserMgmt.Migrations
             //    );
             //
 
-            
+            if (!context.Users.Any(u=>u.UserName =="admin@GymBooking.se"))
+            {
+                var roleStore = new RoleStore<IdentityRole>(context);
+                var roleManager = new RoleManager<IdentityRole>(roleStore);
 
+                var userStore = new UserStore<ApplicationUser>(context);
+                var userManager = new UserManager<ApplicationUser>(userStore);
+                var user = new ApplicationUser { UserName = "admin@GymBooking.se", Email = "admin@GymBooking.se" };
+
+                userManager.Create(user, "Passwor&");
+                roleManager.Create(new IdentityRole { Name = "admin" });
+
+                userManager.AddToRole(user.Id, "admin");
+            }
+            
+            
 
         }
     }
